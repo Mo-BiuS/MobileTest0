@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b84s5kafc3cvn"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_1lxr8"]
+[ext_resource type="Texture2D" uid="uid://rlg6sjyiclus" path="res://ressources/Character.png" id="2_dh32b"]
+[ext_resource type="Script" path="res://scenes/Sprite2D.gd" id="3_8h2pw"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_1lxr8")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -240.0
+offset_right = 160.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="player" type="Sprite2D" parent="Panel"]
+texture_filter = 1
+position = Vector2(160, 240)
+scale = Vector2(2, 2)
+texture = ExtResource("2_dh32b")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+script = ExtResource("3_8h2pw")

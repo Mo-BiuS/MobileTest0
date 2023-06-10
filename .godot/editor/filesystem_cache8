@@ -1,0 +1,11 @@
+fc8a56933c4b1c8d796fdb8f7a9f9475
+::res://::1686414070
+icon.svg::CompressedTexture2D::8524860202407337459::1686221692::1686221698::1::::<><>::
+README.md::TextFile::-1::1686413782::0::1::::<><>::
+::res://export/::1686411334
+::res://ressources/::1686304050
+Character.png::CompressedTexture2D::1216339119133633846::1686304049::1686304050::1::::<><>::
+::res://scenes/::1686411785
+main.gd::GDScript::-1::1686411785::0::1::::<>Node<>::
+main.tscn::PackedScene::4763666483767301247::1686411785::0::1::::<><>::res://scenes/main.gd<>uid://rlg6sjyiclus<>res://scenes/Sprite2D.gd
+Sprite2D.gd::GDScript::-1::1686411778::0::1::::<>Sprite2D<>::
