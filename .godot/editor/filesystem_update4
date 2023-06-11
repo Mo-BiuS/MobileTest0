@@ -1,2 +1,6 @@
+res://scenes/player.tscn
+res://scenes/game.tscn
+res://scenes/player.gd
+res://scenes/idleArea.gd
 res://scenes/main.tscn
 res://scenes/main.gd

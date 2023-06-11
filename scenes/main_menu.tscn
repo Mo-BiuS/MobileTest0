@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://tbcuknxf3fva"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_0vnys"]
+[ext_resource type="FontFile" uid="uid://dahtum0b7bvb5" path="res://ressources/font/FSEX300.ttf" id="1_xn5vm"]
+
+[node name="PanelContainer" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -47.5
+offset_right = 80.0
+offset_bottom = 47.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0vnys")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_xn5vm")
+theme_override_font_sizes/font_size = 64
+text = "Breakout"
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_xn5vm")
+theme_override_font_sizes/font_size = 64
+text = "Start"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
