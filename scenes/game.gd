@@ -6,6 +6,7 @@ extends Node2D
 func startGame():
 	player.startGame()
 	ball.stickTo(player)
+	ball.launch()
 
 
 func _on_player_launch_ball():
