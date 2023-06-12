@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgcqug5547yn6"]
+[gd_scene load_steps=7 format=3 uid="uid://cgcqug5547yn6"]
 
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_nskj4"]
 [ext_resource type="Texture2D" uid="uid://0dbe75hev8d" path="res://ressources/texture/bricks.png" id="1_xvmeb"]
 [ext_resource type="PackedScene" uid="uid://dm0upigj3b7xc" path="res://scenes/player.tscn" id="2_hlh1u"]
+[ext_resource type="PackedScene" uid="uid://ymxn60tq1sit" path="res://scenes/ball.tscn" id="4_d3gis"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hteu5"]
 texture = ExtResource("1_xvmeb")
@@ -50,13 +52,17 @@ terrain_set_0/terrain_2/color = Color(0.46875, 0.5, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_hteu5")
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_nskj4")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 position = Vector2(15, 0)
 tile_set = SubResource("TileSet_omiqt")
 format = 2
-layer_0/tile_data = PackedInt32Array(327680, 0, 2, 327681, 0, 2, 327682, 0, 2, 327683, 0, 2, 327684, 0, 2, 327685, 0, 2, 262144, 0, 2, 196608, 0, 2, 131072, 0, 2, 65536, 0, 2, 262149, 0, 2, 196613, 0, 2, 131077, 0, 2, 65541, 0, 2, 5, 0, 2, 0, 0, 2, 262145, 0, 1, 262146, 0, 1, 262147, 0, 1, 262148, 0, 1, 196612, 0, 1, 131076, 0, 1, 65540, 0, 1, 4, 0, 2, 196611, 0, 0, 196610, 0, 0, 196609, 0, 1, 131073, 0, 1, 65537, 0, 1, 1, 0, 2, 131075, 0, 0, 65539, 0, 1, 65538, 0, 1, 131074, 0, 0, 2, 0, 2, 3, 0, 2)
+layer_0/tile_data = PackedInt32Array(327680, 0, 2, 327681, 0, 1, 327682, 0, 1, 327683, 0, 1, 327684, 0, 1, 327685, 0, 2, 262144, 0, 2, 196608, 0, 2, 131072, 0, 2, 65536, 0, 2, 262149, 0, 2, 196613, 0, 2, 131077, 0, 2, 65541, 0, 2, 262145, 0, 1, 262146, 0, 0, 262147, 0, 0, 262148, 0, 1, 196612, 0, 1, 131076, 0, 1, 65540, 0, 2, 196611, 0, 0, 196610, 0, 0, 196609, 0, 1, 131073, 0, 1, 65537, 0, 2, 131075, 0, 1, 65539, 0, 2, 65538, 0, 2, 131074, 0, 1, 393216, 0, 2, 393217, 0, 2, 393218, 0, 2, 393219, 0, 2, 393220, 0, 2, 393221, 0, 2)
 
 [node name="Player" parent="." instance=ExtResource("2_hlh1u")]
 position = Vector2(207, 832)
+
+[node name="Ball" parent="." instance=ExtResource("4_d3gis")]
+position = Vector2(207, 814)

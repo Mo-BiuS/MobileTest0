@@ -4,3 +4,6 @@ res://scenes/player.gd
 res://scenes/idleArea.gd
 res://scenes/main.tscn
 res://scenes/main.gd
+res://scenes/main_menu.tscn
+res://scenes/game.gd
+res://scenes/ball.tscn

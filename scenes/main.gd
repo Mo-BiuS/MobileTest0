@@ -5,4 +5,6 @@ extends Node
 
 func _on_main_menu_start():
 	mainMenu.hide()
-	game.hide()
+	game.show()
+	game.startGame()
+

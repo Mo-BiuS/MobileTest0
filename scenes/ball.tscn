@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ymxn60tq1sit"]
+
+[ext_resource type="Texture2D" uid="uid://cf3rn1sw83pvp" path="res://ressources/texture/ball.png" id="1_i5758"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jikgs"]
+
+[node name="Ball" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_i5758")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jikgs")
