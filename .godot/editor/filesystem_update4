@@ -1,10 +1,11 @@
-res://scenes/player.tscn
-res://scenes/game.tscn
-res://scenes/player.gd
-res://scenes/idleArea.gd
 res://scenes/main.tscn
-res://scenes/main.gd
 res://scenes/main_menu.tscn
-res://scenes/game.gd
+res://scenes/game.tscn
+res://scenes/player.tscn
 res://scenes/ball.tscn
+res://scenes/tile.tscn
+res://scenes/tile.gd
+res://scenes/game.gd
+res://scenes/player.gd
 res://scenes/ball.gd
+res://scenes/TileList.gd

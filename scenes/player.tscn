@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://dm0upigj3b7xc"]
 
-[ext_resource type="Texture2D" uid="uid://b8dhww5bw7ge2" path="res://ressources/texture/bar.png" id="1_gc2a8"]
+[ext_resource type="Texture2D" uid="uid://cqgfck4fx53kv" path="res://ressources/texture/bar.png" id="1_gc2a8"]
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_i8ctc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tlns"]
-size = Vector2(64, 16)
+size = Vector2(96, 16)
 
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1

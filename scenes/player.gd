@@ -7,33 +7,31 @@ const SPEED:int = 2
 
 var direction:int = IDLE
 
-var gameStarted:bool = false
-
-signal launchBall
-
 func _process(delta):
 	match direction :
 		LEFT:
-			position.x -= SPEED
+			if(position.x > 48):position.x -= SPEED
 		RIGHT:
-			position.x += SPEED
+			if(position.x < 366):position.x += SPEED
 		IDLE:
 			pass
 
-func _unhandled_input(event):
-	if gameStarted && event is InputEventScreenTouch and event.pressed == true:
-		var centerRect:Rect2i = Rect2i(position.x-32, position.y + 36, 64, 56)
-		var rightRect:Rect2i = Rect2i(position.x+32, position.y + 36, 350, 56)
-		var leftRect:Rect2i = Rect2i(position.x-382, position.y + 36, 350, 56)
-		
-		if rightRect.has_point(event.position):
-			direction = RIGHT
-		elif leftRect.has_point(event.position):
-			direction = LEFT
-		elif centerRect.has_point(event.position):
-			launchBall.emit()
-		else:
-			direction = IDLE
+func _on_right_button_down():
+	if direction == IDLE:
+		direction = RIGHT
+	elif direction == LEFT:
+		direction == IDLE
 
-func startGame():
-	gameStarted = true
+func _on_left_button_down():
+	if direction == IDLE:
+		direction = LEFT
+	elif direction == RIGHT:
+		direction == IDLE
+
+func _on_left_button_up():
+	if direction == LEFT:
+		direction = IDLE
+
+func _on_right_button_up():
+	if direction == RIGHT:
+		direction = IDLE
